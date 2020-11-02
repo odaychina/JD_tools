@@ -92,6 +92,8 @@ def receiveBlue(cookies):
         print(
             f"""totalBlue:{data["result"]["totalBlue"]}(+{data["result"]["receivedBlue"]})""")
         time.sleep(4)
+
+
 def exchangeBean_1(cookies):
     if flag_prize_1 != 1:
         print("[万能的京豆]  自动兑换关闭  flag_prize_1")
@@ -148,6 +150,7 @@ def exchangeBean_1000(cookies):
         print(data)
         if data["bizCode"] != 0:
             print(data["bizMsg"])
+
 
 def receiveCoin(cookies):
     print("\n【收银台收钱】")
@@ -392,14 +395,14 @@ def pk(cookies):
         "data"]["result"]
     print(f'joinStatus:{data["joinStatus"]}')
     print(f'pkStatus:{data["pkStatus"]}')
-    print(f'邀请人数:{data["inviteCount"]}/50')
-    print(f'京豆奖励:{data["prizeInfo"]["inviteJdBeanCount"]}')
 
     if data["joinStatus"] == 1:
         print(f'已经加入队伍【{data["teamId"]}】')
         print(">>>pk对比\n对方/我方")
         print(
             f'{data["pkUserPkInfo"]["teamCount"]}/{data["currentUserPkInfo"]["teamCount"]}')
+        print(f'邀请人数:{data["inviteCount"]}/50')
+        print(f'京豆奖励:{data["prizeInfo"]["inviteJdBeanCount"]}')
 
     if data["pkStatus"] == 2 and data["prizeInfo"]["pkPrizeStatus"] == 2:
         print("开始领取")
@@ -438,6 +441,7 @@ def manage(cookies):
             continue
         ground(cookies, list2[-1]["productId"], i["shelfId"])
 
+
 def run():
     cookiesList = jdCookie.get_cookies()
     for cookies in cookiesList:
@@ -450,12 +454,13 @@ def run():
         upgrade(cookies)
         sign(cookies)
         dailyTask(cookies)
-        #manage(cookies)
+        # manage(cookies)
         limitTimePro(cookies)
         pk(cookies)
         lottery(cookies)
         print("##"*25)
         print("\n\n")
+
 
 if __name__ == "__main__":
     run()
