@@ -9,7 +9,7 @@ import time
 # 通知服务
 #######################
 
-needYou2Know = 1   # [0,1,2,3]  0:不通知     1:server酱      2:SMTP邮件服务        3:bark服务
+needYou2Know = 0   # [0,1,2,3]  0:不通知     1:server酱      2:SMTP邮件服务        3:bark服务
 
 SCKEY = ''        # Server酱的SCKEY
 
