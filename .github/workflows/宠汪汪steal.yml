@@ -2,7 +2,7 @@ name: 宠汪汪steal
 
 on:
   schedule:
-    - cron: '0 16,22 * * * '
+    - cron: '1 1/* * * *'
   watch:
     types: [started]
 jobs:
