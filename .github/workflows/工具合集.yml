@@ -2,7 +2,7 @@ name: 其他脚本 合集
 
 on:
   schedule:
-    - cron: '1 0/* * * *'
+    - cron: 1 1/* * * *
 jobs:
   build:
     runs-on: ubuntu-latest
